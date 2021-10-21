@@ -1,0 +1,40 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(Pacifico-Regular.ttf);
+}
+.post {
+  width: 725px;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px;
+  border-style: solid;
+  border-color: rgb(184, 184, 184);
+  font-family: OpenSans;
+}
+@media only screen and (max-width: 800px) {
+  .post {
+    width: 95%;
+  }
+}
+
+.slider {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
