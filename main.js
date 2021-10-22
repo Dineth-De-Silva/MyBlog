@@ -1,22 +1,25 @@
 var main_page_position_right = true;
 var main_current_col = 0;
-function main_addpage(Title, Nposts, Desc) {
+var main_page_area = document.createElement("div");
+function main_default() {
   var area = document.getElementById("area");
-  var page_area = document.createElement("div");
-  page_area.style = "padding: 20px";
+  main_page_area.style = "padding: 20px";
   var h1 = document.createElement("h1");
   h1.style = "text-align: center";
   h1.innerHTML = "<i class='fas fa-edit'></i> <u>Pages</u>";
-  page_area.appendChild(h1);
+  main_page_area.appendChild(h1);
   var br = document.createElement("br");
-  page_area.appendChild(br);
+  main_page_area.appendChild(br);
+  area.appendChild(main_page_area);
+}
+function main_addpage(Title, Nposts, Desc) {
   if (main_page_position_right) {
     var new_area_col = main_new_area_col();
     var page = main_page(Title, Nposts, Desc);
     new_area_col.appendChild(page);
-    page_area.appendChild(new_area_col);
+    main_page_area.appendChild(new_area_col);
     main_page_position_right = false;
-    area.appendChild(new_area_col);
+    main_page_area.appendChild(new_area_col);
   } else {
     var cur_area_col = document.getElementById(
       "c" + main_current_col.toString()

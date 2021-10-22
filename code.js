@@ -5,6 +5,7 @@ function parachecker() {
 }
 
 function to_main() {
+  main_default();
   main_fetchpages();
 }
 
