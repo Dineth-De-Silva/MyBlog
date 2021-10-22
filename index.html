@@ -177,8 +177,12 @@
         >MyBlog</span
       >
     </nav>
+    <!--Menu Icon-->
+    <h2 style="position: fixed; top: 20px; left: 20px" onclick="open_menu()">
+      <i class="fas fa-bars"></i>
+    </h2>
     <!--Menu-->
-    <div class="menu">
+    <div class="menu" id="menu">
       <div
         style="
           display: flex;
@@ -189,8 +193,13 @@
           padding: 10px;
         "
       >
-        <div style="flex-grow: 4">
-          <h2>Menu</h2>
+        <div style="flex-grow: 3">
+          <h2 style="display: flex; justify-content: center; padding-left: 10px;padding-right: 20px;">
+            <div style="flex-grow: 1; text-align: left">Menu</div>
+            <div style="flex-grow: 1; text-align: right" onclick="close_menu()">
+              <i class="fas fa-times"></i>
+            </div>
+          </h2>
           <hr />
           <div style="padding: 10px; font-size: x-large">
             Pages <i class="fas fa-caret-down"></i>
@@ -204,13 +213,25 @@
           <div style="margin-left: 10px">Hello</div>
         </div>
         <hr />
-        <div style="flex-grow: 1"></div>
+        <div style="flex-grow: 2"></div>
       </div>
     </div>
     <!--Up Btn-->
     <a style="position: fixed; bottom: 20px; right: 20px" href="#"
       ><button type="button" class="btn btn-dark">Up</button></a
     >
+    <script>
+      function open_menu() {
+        var menu = document.getElementById("menu");
+        menu.classList.remove("close")
+        menu.classList.add("open");
+      }
+      function close_menu() {
+        var menu = document.getElementById("menu");
+        menu.classList.remove("open");
+        menu.classList.add("close");
+      }
+    </script>
     <!-- <script src="code.js"></script> -->
   </body>
 </html>

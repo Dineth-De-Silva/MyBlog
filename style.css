@@ -30,16 +30,30 @@
   position: fixed;
   top:0px;
   bottom: 0px;
+  left: -325px;
   color: bisque;
   background-color: rgb(59,59,59);
-  width: 350px;
+  width: 325px;
+}
+
+.open{
+  left: 0px;
+  animation-name: open_menu;
+  animation-duration: 0.5s;
+}
+.close{
+  left: -325px;
+  animation-name: close_menu;
+  animation-duration: .5s;
 }
 @media only screen and (max-width: 800px) {
   .post {
     width: 95%;
   }
+}
+@media only screen and (max-width: 300px) {
   .menu {
-    width: 100%;
+    width: 95%;
   }
 }
 @media only screen and (max-width: 1020px) {
@@ -48,21 +62,11 @@
   }
 }
 
-
-.slider {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+@keyframes close_menu {
+  from {left: 0px;}
+  to {left: -325px}
 }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes open_menu {
+  from {left: -325px;}
+  to {left: 0px}
 }
