@@ -60,7 +60,7 @@ function main_page(Title, Nposts, Desc) {
   a.classList.add("btn");
   a.classList.add("btn-outline-warning");
   a.style = "border-radius: 50px";
-  a.innerHTML = "View Posts <i class='fa fa-external-link'></i>";
+  a.innerHTML = "Posts <i class='fa fa-external-link'></i>";
   div3.appendChild(a);
   div2.appendChild(div3);
   div.appendChild(div2);
