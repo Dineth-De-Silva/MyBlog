@@ -1,3 +1,4 @@
+/*fonts*/
 @font-face {
   font-family: OpenSans;
   src: url(fonts/OpenSans-Regular.ttf);
@@ -6,26 +7,8 @@
   font-family: Pacifico;
   src: url(fonts/Pacifico-Regular.ttf);
 }
-.post {
-  width: 725px;
-  border-radius: 20px;
-  padding: 25px;
-  margin: 25px;
-  border-style: solid;
-  border-color: rgb(184, 184, 184);
-  font-family: OpenSans;
-}
-.page {
-  width: 450px;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 25px;
-  /* font-family: OpenSans; */
-}
-.area_cols_page {
-  display: flex;
-  flex-direction: row;
-}
+
+/*menu*/
 .menu {
   position: fixed;
   top: 0px;
@@ -35,23 +18,6 @@
   background-color: rgb(59, 59, 59);
   width: 325px;
 }
-
-.menu_drop_list {
-  margin-top: 10px;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: large;
-  display: none;
-}
-
-.drop {
-  display: block;
-}
-
-.drop_close {
-  display: none;
-}
-
 .open {
   left: 0px;
   animation-name: open_menu;
@@ -62,22 +28,6 @@
   animation-name: close_menu;
   animation-duration: 0.5s;
 }
-@media only screen and (max-width: 800px) {
-  .post {
-    width: 95%;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .menu {
-    width: 95%;
-  }
-}
-@media only screen and (max-width: 1020px) {
-  .area_cols_page {
-    flex-direction: column;
-  }
-}
-
 @keyframes close_menu {
   from {
     left: 0px;
@@ -92,5 +42,32 @@
   }
   to {
     left: 0px;
+  }
+}
+
+/*menu drop list*/
+.menu_drop_list {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: large;
+  display: none;
+}
+.drop {
+  display: block;
+}
+.drop_close {
+  display: none;
+}
+
+/*controls*/
+@media only screen and (max-width: 300px) {
+  .menu {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .main_area_col {
+    flex-direction: column;
   }
 }

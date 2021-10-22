@@ -1,0 +1,15 @@
+.post {
+  width: 725px;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px;
+  border-style: solid;
+  border-color: rgb(184, 184, 184);
+  font-family: OpenSans;
+}
+
+@media only screen and (max-width: 800px) {
+  .post {
+    width: 95%;
+  }
+}

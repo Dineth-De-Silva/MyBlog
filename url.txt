@@ -1,3 +1,0 @@
-for main -no para
-for page -pg={no.}
-for post -pg={no.}&po={2no.}

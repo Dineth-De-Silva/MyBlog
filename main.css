@@ -1,0 +1,10 @@
+.main_page {
+  width: 450px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px;
+}
+.main_area_col {
+  display: flex;
+  flex-direction: row;
+}
