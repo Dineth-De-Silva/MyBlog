@@ -1,28 +1,22 @@
 function parachecker() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  if(urlParams.has("pg")){
+  if (urlParams.has("pg")) {
     if (urlParams.has("po")) {
-      post(pg,po);
-    }else{
-      page(pg)
+      post(pg, po);
+    } else {
+      page(pg);
     }
-  }else{
-    main()
+  } else {
+    main();
   }
 }
 
-function main(){
+function main() {}
 
-}
+function page(pg) {}
 
-function page(pg){
-
-}
-
-function post(pg,po){
-
-}
+function post(pg, po) {}
 
 parachecker();
 
