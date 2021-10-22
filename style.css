@@ -1,10 +1,10 @@
 @font-face {
   font-family: OpenSans;
-  src: url(OpenSans-Regular.ttf);
+  src: url(fonts/OpenSans-Regular.ttf);
 }
 @font-face {
   font-family: Pacifico;
-  src: url(Pacifico-Regular.ttf);
+  src: url(fonts/Pacifico-Regular.ttf);
 }
 .post {
   width: 725px;
@@ -15,11 +15,39 @@
   border-color: rgb(184, 184, 184);
   font-family: OpenSans;
 }
+.page {
+  width: 450px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px;
+  /* font-family: OpenSans; */
+}
+.area_cols_page {
+  display: flex;
+  flex-direction: row;
+}
+.menu{
+  position: fixed;
+  top:0px;
+  bottom: 0px;
+  color: bisque;
+  background-color: rgb(59,59,59);
+  width: 350px;
+}
 @media only screen and (max-width: 800px) {
   .post {
     width: 95%;
   }
+  .menu {
+    width: 100%;
+  }
 }
+@media only screen and (max-width: 1020px) {
+  .area_cols_page {
+    flex-direction: column;
+  }
+}
+
 
 .slider {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
