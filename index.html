@@ -3,6 +3,7 @@
 
 <head>
    <meta charset="UTF-8" />
+   <meta name="language" content="en-US">
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,7 +26,6 @@
 </head>
 
 <body>
-
    <!--Firebase-->
    <!-- The core Firebase JS SDK is always required and must be listed first -->
    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -33,6 +33,7 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/app-check.js"></script>
    <script>
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -48,8 +49,16 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-   </script>
+      const appCheck = firebase.appCheck();
+      // Pass your reCAPTCHA v3 site key (public key) to activate(). Make sure this
+      // key is the counterpart to the secret key you set in the Firebase console.
+      appCheck.activate(
+         '6LdydOscAAAAAOxnEo1i1egEW0EYDIQ12agakS4n',
 
+         // Optional argument. If true, the SDK automatically refreshes App Check
+         // tokens as needed.
+         true);
+   </script>
    <!--App-->
 
    <!--Header-->
@@ -78,24 +87,24 @@
                <spam style="color: white; font-size: xx-large">D. A Dineth De Silva</spam>
                <br />
                <spam style="color: white; font-size: x-large"><i class="fas fa-graduation-cap"
-                     style="color: rgb(255, 174, 0)""></i>
-                     (Student @ D.S.S.C)
+                     style="color: rgb(255, 174, 0)"></i>
+                  (Student @ D.S.S.C)
                </spam>
-               </b>
-            </p>
-         </div>
-      </header>
+            </b>
+         </p>
+      </div>
+   </header>
 
-      <!--Main-->
-      <main style=" background-image: url(assets/background2.png)" id="area">
-                     </main>
+   <!--Main-->
+   <main style=" background-image: url(assets/background2.png)" id="area">
+   </main>
 
-                     <!--Footer-->
-                     <footer style="width: 100%; background-color: rgb(59, 59, 59); height: 200px; color: wheat;">
-                     </footer>
+   <!--Footer-->
+   <footer style="width: 100%; background-color: rgb(59, 59, 59); height: 200px; color: wheat;">
+   </footer>
 
-                     <!--Nav Bar-->
-                     <nav style="
+   <!--Nav Bar-->
+   <nav style="
          background-image: url(assets/background.jpg);
          text-align: center;
          padding-bottom: 10px;
@@ -104,56 +113,56 @@
          left: 0px;
          right: 0px;
          ">
-                        <span style="font-size: 45px; font-family: Pacifico; font-weight: bold">MyBlog</span>
-                     </nav>
+      <span style="font-size: 45px; font-family: Pacifico; font-weight: bold">MyBlog</span>
+   </nav>
 
-                     <!--Menu Icon-->
-                     <h2 style="position: fixed; top: 20px; left: 20px;cursor: pointer;" onclick="open_menu()">
-                        <i class="fas fa-bars"></i>
-                     </h2>
+   <!--Menu Icon-->
+   <h2 style="position: fixed; top: 20px; left: 20px;cursor: pointer;" onclick="open_menu()">
+      <i class="fas fa-bars"></i>
+   </h2>
 
-                     <!--Menu-->
-                     <div class="menu" id="menu">
-                        <div style="
+   <!--Menu-->
+   <div class="menu" id="menu">
+      <div style="
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
             padding: 10px;
             ">
-                           <div style="flex-grow: 3">
-                              <h2
-                                 style="display: flex; justify-content: center; padding-left: 10px;padding-right: 20px;padding-top: 10px;height: 50px;">
-                                 <div style="flex-grow: 1; text-align: left">Menu</div>
-                                 <div style="flex-grow: 1; text-align: right;cursor: pointer;" onclick="close_menu()">
-                                    <i class="fas fa-times" style="color: black;"></i>
-                                 </div>
-                              </h2>
-                              <hr />
-                              <div style="padding: 10px;">
-                                 <div style="font-size: x-large;cursor: pointer;" onclick="dropper()">
-                                    Pages <i class="fas fa-caret-down"></i>
-                                 </div>
-                                 <div class="menu_drop_list" id="menu_drop_list">
-                                    <div>Home (0)</div>
-                                    <div>Python development (12)</div>
-                                    <div>Java (7)</div>
-                                 </div>
-                              </div>
-                           </div>
-                           <hr />
-                           <div style="flex-grow: 2"></div>
-                        </div>
-                     </div>
+         <div style="flex-grow: 3">
+            <h2
+               style="display: flex; justify-content: center; padding-left: 10px;padding-right: 20px;padding-top: 10px;height: 50px;">
+               <div style="flex-grow: 1; text-align: left">Menu</div>
+               <div style="flex-grow: 1; text-align: right;cursor: pointer;" onclick="close_menu()">
+                  <i class="fas fa-times" style="color: black;"></i>
+               </div>
+            </h2>
+            <hr />
+            <div style="padding: 10px;">
+               <div style="font-size: x-large;cursor: pointer;" onclick="dropper()">
+                  Pages <i class="fas fa-caret-down"></i>
+               </div>
+               <div class="menu_drop_list" id="menu_drop_list">
+                  <div>Home (0)</div>
+                  <div>Python development (12)</div>
+                  <div>Java (7)</div>
+               </div>
+            </div>
+         </div>
+         <hr />
+         <div style="flex-grow: 2"></div>
+      </div>
+   </div>
 
-                     <!--Up Btn-->
-                     <a style="position: fixed; bottom: 20px; right: 20px" href="#"><button type="button"
-                           class="btn btn-dark">Up</button></a>
-                     <!--Scripts-->
+   <!--Up Btn-->
+   <a style="position: fixed; bottom: 20px; right: 20px" href="#"><button type="button"
+         class="btn btn-dark">Up</button></a>
+   <!--Scripts-->
 
-                     <script src="control.js"></script>
-                     <script src="main.js"></script>
-                     <script src="code.js"></script>
+   <script src="control.js"></script>
+   <script src="main.js"></script>
+   <script src="code.js"></script>
 </body>
 
 </html>
