@@ -2,100 +2,105 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8" />
-   <meta name="language" content="en-US">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta content="en-US" name="language">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-   <!--Bootstrap-->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet"/>
+    <script crossorigin="anonymous"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-   <!--FontAwesome-->
-   <script src="https://kit.fontawesome.com/82f4c8e4b0.js" crossorigin="anonymous"></script>
+    <!--FontAwesome-->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/82f4c8e4b0.js"></script>
 
-   <!--Custom-->
-   <link rel="stylesheet" href="main.css" />
-   <link rel="stylesheet" href="style.css" />
+    <!--Moment-->
+    <script crossorigin="anonymous"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
-   <link rel="icon" href="assets/icon.png" />
-   <title>MyBlog</title>
+    <!--Custom-->
+    <link href="main.css" rel="stylesheet"/>
+    <link href="page.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+
+    <link href="assets/icon.png" rel="icon"/>
+    <title>MyBlog</title>
 </head>
 
 <body>
-   <!--Firebase-->
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-   <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
-   <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-         apiKey: "AIzaSyB6rW_czHfNMm7f1LE4lVtbE7Xqk8ACq3c",
-         authDomain: "myblog-a8cfa.firebaseapp.com",
-         databaseURL: "https://myblog-a8cfa-default-rtdb.firebaseio.com",
-         projectId: "myblog-a8cfa",
-         storageBucket: "myblog-a8cfa.appspot.com",
-         messagingSenderId: "726663213611",
-         appId: "1:726663213611:web:de7fc30468b82fdc64306e",
-         measurementId: "G-YY3ZXCNW8D"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-   </script>
-   <!--App-->
-
-   <!--Header-->
-   <header>
-      <div style="
+<!--Firebase-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyB6rW_czHfNMm7f1LE4lVtbE7Xqk8ACq3c",
+        authDomain: "myblog-a8cfa.firebaseapp.com",
+        databaseURL: "https://myblog-a8cfa-default-rtdb.firebaseio.com",
+        projectId: "myblog-a8cfa",
+        storageBucket: "myblog-a8cfa.appspot.com",
+        messagingSenderId: "726663213611",
+        appId: "1:726663213611:web:de7fc30468b82fdc64306e",
+        measurementId: "G-YY3ZXCNW8D"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<!--App-->
+<!--Header-->
+<header>
+    <div style="
             background-image: url(assets/background.gif);
             background-size: cover;
             padding: 25px;
             text-align: center;
             ">
-         <br />
-         <br />
-         <br />
-         <br />
-         <img src="assets/face.jpg" alt="Face" width="135" height="140" style="
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <img alt="Face" height="140" src="assets/face.jpg" style="
                padding: 2px;
                border-radius: 50%;
                margin-top: 20px;
                border-style: solid;
                border-color: rgb(255, 174, 0);
-               " />
-         <p>
+               " width="135"/>
+        <p>
             <b>
-               <spam style="color: wheat; font-size: xxx-large">I'm</spam>
-               <br />
-               <spam style="color: white; font-size: xx-large">D. A Dineth De Silva</spam>
-               <br />
-               <spam style="color: white; font-size: x-large"><i class="fas fa-graduation-cap"
-                     style="color: rgb(255, 174, 0)"></i>
-                  (Student @ D.S.S.C)
-               </spam>
+                <spam style="color: wheat; font-size: xxx-large">I'm</spam>
+                <br/>
+                <spam style="color: white; font-size: xx-large">D. A Dineth De Silva</spam>
+                <br/>
+                <spam style="color: white; font-size: x-large"><i class="fas fa-graduation-cap"
+                                                                  style="color: rgb(255, 174, 0)"></i>
+                    (Student @ D.S.S.C)
+                </spam>
             </b>
-         </p>
-      </div>
-   </header>
+        </p>
+    </div>
+</header>
 
-   <!--Main-->
-   <main style=" background-image: url(assets/background2.png)" id="area">
-   </main>
+<!--Main-->
+<main id="area" style=" background-image: url(assets/background2.png)">
+</main>
 
-   <!--Footer-->
-   <footer style="width: 100%; background-color: rgb(59, 59, 59); height: 200px; color: wheat;">
-   </footer>
+<!--Footer-->
+<footer style="width: 100%; background-color: rgb(59, 59, 59); height: 200px; color: wheat;">
+</footer>
 
-   <!--Nav Bar-->
-   <nav style="
+<!--Nav Bar-->
+<nav style="
          background-image: url(assets/background.jpg);
          text-align: center;
          padding-bottom: 10px;
@@ -104,56 +109,60 @@
          left: 0px;
          right: 0px;
          ">
-      <span style="font-size: 45px; font-family: Pacifico; font-weight: bold">MyBlog</span>
-   </nav>
+    <span style="font-size: 45px; font-family: Pacifico; font-weight: bold">MyBlog</span>
+</nav>
 
-   <!--Menu Icon-->
-   <h2 style="position: fixed; top: 20px; left: 20px;cursor: pointer;" onclick="open_menu()">
-      <i class="fas fa-bars"></i>
-   </h2>
+<!--Menu Icon-->
+<h2 onclick="open_menu()" style="position: fixed; top: 20px; left: 20px;cursor: pointer;">
+    <i class="fas fa-bars"></i>
+</h2>
 
-   <!--Menu-->
-   <div class="menu" id="menu">
-      <div style="
+<!--Menu-->
+<div class="menu" id="menu">
+    <div style="
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
             padding: 10px;
             ">
-         <div style="flex-grow: 3">
+        <div style="flex-grow: 3">
             <h2
-               style="display: flex; justify-content: center; padding-left: 10px;padding-right: 20px;padding-top: 10px;height: 50px;">
-               <div style="flex-grow: 1; text-align: left">Menu</div>
-               <div style="flex-grow: 1; text-align: right;cursor: pointer;" onclick="close_menu()">
-                  <i class="fas fa-times" style="color: black;"></i>
-               </div>
+                    style="display: flex; justify-content: center; padding-left: 10px;padding-right: 20px;padding-top: 10px;height: 50px;">
+                <div style="flex-grow: 1; text-align: left">Menu</div>
+                <div onclick="close_menu()" style="flex-grow: 1; text-align: right;cursor: pointer;">
+                    <i class="fas fa-times" style="color: black;"></i>
+                </div>
             </h2>
-            <hr />
+            <hr/>
             <div style="padding: 10px;">
-               <div style="font-size: x-large;cursor: pointer;" onclick="dropper()">
-                  Pages <i class="fas fa-caret-down"></i>
-               </div>
-               <div class="menu_drop_list" id="menu_drop_list">
-                  <div>Home (0)</div>
-                  <div>Python development (12)</div>
-                  <div>Java (7)</div>
-               </div>
+                <div onclick="dropper()" style="font-size: x-large;cursor: pointer;">
+                    Pages <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="menu_drop_list" id="menu_drop_list">
+                    <div>Home (0)</div>
+                    <div>Python development (12)</div>
+                    <div>Java (7)</div>
+                </div>
             </div>
-         </div>
-         <hr />
-         <div style="flex-grow: 2"></div>
-      </div>
-   </div>
+        </div>
+        <hr/>
+        <div style="flex-grow: 2"></div>
+    </div>
+</div>
 
-   <!--Up Btn-->
-   <a style="position: fixed; bottom: 20px; right: 20px" href="#"><button type="button"
-         class="btn btn-dark">Up</button></a>
-   <!--Scripts-->
+<!--Up Btn-->
+<a href="#" style="position: fixed; bottom: 20px; right: 20px">
+    <button class="btn btn-dark"
+            type="button">Up
+    </button>
+</a>
+<!--Scripts-->
 
-   <script src="control.js"></script>
-   <script src="main.js"></script>
-   <script src="code.js"></script>
+<script src="control.js"></script>
+<script src="main.js"></script>
+<script src="page.js"></script>
+<script src="code.js"></script>
 </body>
 
 </html>

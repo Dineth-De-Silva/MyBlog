@@ -1,0 +1,15 @@
+.page_post {
+    width: 500px;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    font-family: OpenSans;
+    background-color: white;
+}
+
+.page_area_col {
+    display: flex;
+    flex-direction: row;
+}

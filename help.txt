@@ -3,12 +3,12 @@ id's
 area
 menu
 menu_drop_list
-
+c{n}
 
 var's
 
 drop_list_status
-
+main_{any}
 
 func's
 
@@ -17,6 +17,9 @@ close_menu
 dropper
 drop_list
 drop_list_close
+parachecker()
+to_{any}
+main_{}
 
 styl's
 

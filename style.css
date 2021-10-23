@@ -1,73 +1,91 @@
 /*fonts*/
 @font-face {
-  font-family: OpenSans;
-  src: url(fonts/OpenSans-Regular.ttf);
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-Regular.ttf);
 }
+
 @font-face {
-  font-family: Pacifico;
-  src: url(fonts/Pacifico-Regular.ttf);
+    font-family: Pacifico;
+    src: url(fonts/Pacifico-Regular.ttf);
 }
 
 /*menu*/
 .menu {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: -325px;
-  color: wheat;
-  background-color: rgb(59, 59, 59);
-  width: 325px;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: -325px;
+    color: wheat;
+    background-color: rgb(59, 59, 59);
+    width: 325px;
 }
+
 .open {
-  left: 0px;
-  animation-name: open_menu;
-  animation-duration: 0.5s;
+    left: 0px;
+    animation-name: open_menu;
+    animation-duration: 0.5s;
 }
+
 .close {
-  left: -325px;
-  animation-name: close_menu;
-  animation-duration: 0.5s;
+    left: -325px;
+    animation-name: close_menu;
+    animation-duration: 0.5s;
 }
+
 @keyframes close_menu {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -325px;
-  }
+    from {
+        left: 0px;
+    }
+    to {
+        left: -325px;
+    }
 }
+
 @keyframes open_menu {
-  from {
-    left: -325px;
-  }
-  to {
-    left: 0px;
-  }
+    from {
+        left: -325px;
+    }
+    to {
+        left: 0px;
+    }
 }
 
 /*menu drop list*/
 .menu_drop_list {
-  margin-top: 10px;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: large;
-  display: none;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: large;
+    display: none;
 }
+
 .drop {
-  display: block;
+    display: block;
 }
+
 .drop_close {
-  display: none;
+    display: none;
 }
 
 /*controls*/
 @media only screen and (max-width: 300px) {
-  .menu {
-    width: 95%;
-  }
+    .menu {
+        width: 95%;
+    }
 }
+
 @media only screen and (max-width: 1020px) {
-  .main_area_col {
-    flex-direction: column;
-  }
+    .main_area_col {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .page_post {
+        width: 80%;
+    }
+
+    .page_area_col {
+        flex-direction: column;
+    }
 }
