@@ -55,18 +55,24 @@ function page_addpost(Title, Date, Desc) {
 }
 
 function page_post(Title, Date, Desc) {
+    var max_desc_width = 170;
+    if (Desc.length > max_desc_width) {
+        Desc = Desc.substring(0, 170) + "... <a href='go' style='font-size: medium'>Read More</a>"
+    }
     var divn = document.createElement("div");
     divn.style = "flex-grow: 1; display: flex; justify-content: center"
     var div = document.createElement("div");
     div.classList.add("page_post");
+    div.classList.add("shadow")
     var div2 = document.createElement("div");
     div2.style = "front-weight: bold";
     div2.innerHTML = Date;
     div.appendChild(div2);
-    var div3 = document.createElement("div");
-    div3.style = "word-wrap: break-word;font-size: x-large;font-weight: bold";
-    div3.innerHTML = "<u>" + Title + "</u>";
-    div.appendChild(div3);
+    var a = document.createElement("a");
+    a.style = "word-wrap: break-word;font-size: x-large;font-weight: bold;color: black";
+    a.href = "hello"
+    a.innerHTML = "<u>" + Title + "</u>";
+    div.appendChild(a);
     var div4 = document.createElement("div");
     div4.style =
         "border-left: 6px solid rgb(255, 174, 0);padding: 10px;word-wrap: break-word;text-align: left;font-size: large";

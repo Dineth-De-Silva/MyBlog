@@ -72,6 +72,9 @@
     .menu {
         width: 95%;
     }
+    .page_post {
+        width: 95%;
+    }
 }
 
 @media only screen and (max-width: 1020px) {
@@ -81,10 +84,6 @@
 }
 
 @media only screen and (max-width: 1130px) {
-    .page_post {
-        width: 80%;
-    }
-
     .page_area_col {
         flex-direction: column;
     }

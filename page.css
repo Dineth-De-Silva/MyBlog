@@ -3,10 +3,9 @@
     border-radius: 20px;
     padding: 25px;
     margin: 25px;
-    border-style: solid;
-    border-color: rgb(95, 95, 95);
     font-family: OpenSans;
-    background-color: transparent;
+    background-color: #f3efee;
+    color: black;
 }
 
 .page_area_col {

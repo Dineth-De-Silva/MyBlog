@@ -9,6 +9,7 @@ var's
 
 drop_list_status
 main_{any}
+page_{any}
 
 func's
 
@@ -19,7 +20,8 @@ drop_list
 drop_list_close
 parachecker()
 to_{any}
-main_{}
+main_{any}
+page_{any}
 
 styl's
 
