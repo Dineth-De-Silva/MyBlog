@@ -4,9 +4,9 @@
     padding: 25px;
     margin: 25px;
     border-style: solid;
-    border-color: rgb(184, 184, 184);
+    border-color: rgb(95, 95, 95);
     font-family: OpenSans;
-    background-color: white;
+    background-color: transparent;
 }
 
 .page_area_col {

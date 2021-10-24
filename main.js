@@ -5,6 +5,7 @@ var main_page_area = document.createElement("div");
 function main_default() {
     var area = document.getElementById("area");
     main_page_area.style = "padding: 20px";
+    main_page_area.appendChild(document.createElement("br"))
     var h1 = document.createElement("h1");
     h1.style = "text-align: center";
     h1.innerHTML = "<i class='fas fa-edit'></i> <u>Pages</u>";

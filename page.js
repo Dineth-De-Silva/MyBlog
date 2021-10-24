@@ -5,6 +5,7 @@ var page_post_area = document.createElement("div");
 function page_default(pageN) {
     var area = document.getElementById("area");
     page_post_area.style = "padding: 20px";
+    page_post_area.appendChild(document.createElement("br"))
     var h1 = document.createElement("h1");
     h1.style = "padding-left: 50px;padding-right: 50px;text-align: center"
     firebase
