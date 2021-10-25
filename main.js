@@ -61,7 +61,7 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
         p.innerHTML = Desc;
         div3.appendChild(p);
         var a = document.createElement("a");
-        a.href = "https://dineth-de-silva.github.io/MyBlog/?pg=" + Id;
+        a.href = window.location.href + "?pg=" + Id;
         a.classList.add("btn");
         a.classList.add("btn-outline-warning");
         a.style = "border-radius: 50px";
@@ -77,7 +77,7 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
         div2.classList.add("card");
         div2.classList.add("main_page");
         div2.classList.add("shadow");
-        div2.style = "background-color: rgb(255,0,0);width:250px;height:246"
+        div2.style = "background-color: rgb(255,0,-2, 0.92);width:250px;height:246"
         var div3 = document.createElement("div");
         div3.classList.add("card-body");
         var h5 = document.createElement("h5");
