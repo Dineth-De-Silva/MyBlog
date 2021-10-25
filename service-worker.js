@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["Assets/Icons/Favicon-128x128.png", "d6a355ac7d50b65d7eff517c62b0f15b"], ["Assets/Icons/Favicon-144x144.png", "97353d35444b63730e032a15916bddc1"], ["Assets/Icons/Favicon-152x152.png", "419e2e30f11839eeb12062051f7ec18f"], ["Assets/Icons/Favicon-192x192.png", "322216026e8a729f210c9011fc286c20"], ["Assets/Icons/Favicon-384x384.png", "3e0d9048bf881fcef436067066e0dafe"], ["Assets/Icons/Favicon-512x512.png", "a787132c346f2fc1d69989b4b91940ec"], ["Assets/Icons/Favicon-72x72.png", "4465d60a4634a576bb44a7fbe808fc33"], ["Assets/Icons/Favicon-96x96.png", "c0b19ec3e6b2597b8850988ead1cf1db"], ["Assets/Icons/Favicon.ico", "45cc0e15427cc59525fab55b13b0e5bf"], ["Assets/Images/Done.svg", "f778e9e8f922348bbf2f6412b7008506"], ["Assets/Images/NotDone.svg", "419630b25cddcf8c406f536ed70d4e87"], ["Code.js", "ae07e4ee60cb924e40298d552890a347"], ["Style.css", "3e2721f2f899f1da0e262239a259ea4f"], ["index.html", "09f2cebf7a7d2cf8947d811ec396ce68"], ["manifest.json", "5b17c85a6bfe09c5396481d154bde439"]];
+var precacheConfig = ["./"];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
