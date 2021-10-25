@@ -60,7 +60,7 @@ function main_page(Id, Title, Nposts, Desc) {
     p.innerHTML = Desc;
     div3.appendChild(p);
     var a = document.createElement("a");
-    a.href = "https://dineth-de-silva.github.io/MyBlog/?pg="+Id;
+    a.href = "https://dineth-de-silva.github.io/MyBlog/?pg=" + Id;
     a.classList.add("btn");
     a.classList.add("btn-outline-warning");
     a.style = "border-radius: 50px";

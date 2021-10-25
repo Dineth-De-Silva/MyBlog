@@ -68,22 +68,13 @@
 }
 
 /*controls*/
-@media only screen and (max-width: 300px) {
-    .menu {
-        width: 95%;
-    }
-    .page_post {
-        width: 95%;
-    }
-}
-
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1150px) {
     .main_area_col {
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1180px) {
     .page_area_col {
         flex-direction: column;
     }
