@@ -3,8 +3,8 @@
   "short_name": "MyBlog",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffd000",
-  "theme_color": "#ffd000",
+  "background_color": "rgb(255, 174, 0)",
+  "theme_color": "rgb(255, 174, 0)",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
