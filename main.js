@@ -34,7 +34,7 @@ function main_addpage(Noml, Id, Title, Nposts, Desc) {
 }
 
 function main_page(Noml, Id, Title, Nposts, Desc) {
-    if (Noml){
+    if (Noml) {
         var div = document.createElement("div");
         div.style = "flex-grow: 1; display: flex; justify-content: center";
         var div2 = document.createElement("div");
@@ -70,7 +70,7 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
         div2.appendChild(div3);
         div.appendChild(div2);
         return div;
-    }else{
+    } else {
         var div = document.createElement("div");
         div.style = "flex-grow: 1; display: flex; justify-content: center";
         var div2 = document.createElement("div");
@@ -122,7 +122,7 @@ function main_fetchpages() {
         .ref("all/")
         .on('value', (snapshot) => {
             const Nposts = snapshot.val().nposts;
-            main_addpage(false, null,  null, Nposts, null);
+            main_addpage(false, null, null, Nposts, null);
         });
     firebase
         .database()

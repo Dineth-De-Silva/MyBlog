@@ -12,14 +12,14 @@ function parachecker() {
                 to_page(PageN, cyear)
             }
         }
-    } else if(urlParams.has("ap")) {
+    } else if (urlParams.has("ap")) {
         if (urlParams.has("y")) {
 
         } else {
             var cyear = moment().year();
             to_all(cyear)
         }
-    }else{
+    } else {
         to_main();
     }
 }
