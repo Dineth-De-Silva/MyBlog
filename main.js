@@ -7,9 +7,10 @@ function main_default() {
     main_page_area.style = "padding: 20px";
     main_page_area.appendChild(document.createElement("br"))
     var h1 = document.createElement("h1");
-    h1.style = "text-align: center";
-    h1.innerHTML = "<i class='fas fa-edit'></i> <u>Pages</u>";
+    h1.style = "text-align: center;font-family:Pacifico";
+    h1.innerHTML = "All Pages";
     main_page_area.appendChild(h1);
+    main_page_area.appendChild(document.createElement("br"))
     var br = document.createElement("br");
     main_page_area.appendChild(br);
     area.appendChild(main_page_area);
