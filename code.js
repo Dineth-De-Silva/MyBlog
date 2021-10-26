@@ -3,6 +3,10 @@ function parachecker() {
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.has("pg")) {
         if (urlParams.has("po")) {
+            var PageN = urlParams.get("pg");
+            var PostN = urlParams.get("po");
+            var cyear = moment().year();
+            post_default(PageN, PostN, cyear)
         } else {
             var PageN = urlParams.get("pg");
             if (urlParams.has("y")) {

@@ -36,10 +36,10 @@ function page_default(pageN) {
     area.appendChild(page_post_area);
 }
 
-function page_addpost(Title, Date, Desc) {
+function page_addpost(Title, Date, Desc, Id, PageN, cyear) {
     if (page_post_position_right) {
         var new_area_col = page_new_area_col();
-        var page = page_post(Title, Date, Desc);
+        var page = page_post(Title, Date, Desc, Id, PageN, cyear);
         new_area_col.appendChild(page);
         page_post_area.appendChild(new_area_col);
         page_post_position_right = false;
@@ -48,13 +48,13 @@ function page_addpost(Title, Date, Desc) {
         var cur_area_col = document.getElementById(
             "c" + page_current_col.toString()
         );
-        var page = page_post(Title, Date, Desc);
+        var page = page_post(Title, Date, Desc, Id, PageN, cyear);
         cur_area_col.appendChild(page);
         page_post_position_right = true;
     }
 }
 
-function page_post(Title, Date, Desc) {
+function page_post(Title, Date, Desc, Id, PageN, cyear) {
     var max_desc_width = 170;
     if (Desc.length > max_desc_width) {
         Desc = Desc.substring(0, 170) + "... <a href='go' style='font-size: medium'>Read More</a>"
@@ -70,7 +70,7 @@ function page_post(Title, Date, Desc) {
     div.appendChild(div2);
     var a = document.createElement("a");
     a.style = "word-wrap: break-word;font-size: x-large;font-weight: bold;color: black";
-    a.href = "hello"
+    a.href = "https://dineth-de-silva.github.io/MyBlog/" + "?pg=" +PageN + "&po=" + Id;
     a.innerHTML = "<u>" + Title + "</u>";
     div.appendChild(a);
     var div4 = document.createElement("div");
@@ -100,7 +100,8 @@ function page_fetchposts(pageN, cyear) {
                 let Date = Childsnapshot.val().date;
                 let Title = Childsnapshot.val().title;
                 let Desc = Childsnapshot.val().desc;
-                page_addpost(Title, Date, Desc);
+                let Id = Childsnapshot.val().id;
+                page_addpost(Title, Date, Desc, Id, pageN, cyear);
             });
         });
 }
