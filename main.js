@@ -96,7 +96,7 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
         // p.innerHTML = Desc;
         // div3.appendChild(p);
         var a = document.createElement("a");
-        a.href = "https://dineth-de-silva.github.io/MyBlog";
+        a.href = "https://dineth-de-silva.github.io/MyBlog/?ap=true";
         a.classList.add("btn");
         a.classList.add("btn-dark");
         a.style = "border-radius: 50px";
