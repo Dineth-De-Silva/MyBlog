@@ -85,7 +85,7 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
         h5.classList.add("card-title");
         h5.style = "font-size: xx-large;";
         h5.innerHTML =
-            "<span style='text-decoration: underline;'>All Posts</span> <span style='font-size: large;'>" +
+            "<span>All Posts</span> <span style='font-size: large;'>" +
             "(" +
             Nposts +
             ")</span>";
