@@ -91,11 +91,6 @@ function main_page(Noml, Id, Title, Nposts, Desc) {
             ")</span>";
         div3.appendChild(h5);
         div3.appendChild(document.createElement("br"));
-        // var p = document.createElement("p");
-        // p.classList.add("card-text");
-        // p.style = "font-size: larger";
-        // p.innerHTML = Desc;
-        // div3.appendChild(p);
         var a = document.createElement("a");
         a.href = "https://dineth-de-silva.github.io/MyBlog/?ap=true";
         a.classList.add("btn");

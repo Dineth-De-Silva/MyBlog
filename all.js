@@ -17,7 +17,6 @@ function all_default() {
     a.href = "https://dineth-de-silva.github.io/MyBlog/";
     a.classList.add("btn");
     a.classList.add("btn-info");
-    // a.style = "border-radius: 50px";
     a.innerHTML = "Pages <i class='fa fa-external-link'></i>";
     h5.appendChild(a)
     all_post_area.appendChild(h5)
@@ -57,7 +56,7 @@ function all_post(Title, Date, Desc, Pageid) {
     var divn = document.createElement("div");
     divn.style = "flex-grow: 1; display: flex; justify-content: center"
     var div = document.createElement("div");
-    div.classList.add("page_post");
+    div.classList.add("all_post");
     div.classList.add("shadow")
     var div2 = document.createElement("div");
     div2.style = "front-weight: bold";
@@ -89,7 +88,7 @@ function all_post(Title, Date, Desc, Pageid) {
 
 function all_new_area_col() {
     var div = document.createElement("div");
-    div.classList.add("page_area_col");
+    div.classList.add("all_area_col");
     all_current_col++;
     div.id = "c" + all_current_col.toString();
     return div;
