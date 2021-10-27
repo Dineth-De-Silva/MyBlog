@@ -1,5 +1,7 @@
+var UserId = null;
 window.addEventListener("load", (e) => {
     registerSW();
+    registerUser()
 });
 
 async function registerSW() {
@@ -11,6 +13,23 @@ async function registerSW() {
         }
     } else {
         document.querySelector(".alert").removeAttribute("hidden");
+    }
+}
+
+function registerUser() {
+    if (localStorage.getItem("UserId") === null) {
+        var db = firebase.firestore();
+        db.collection("users").add({})
+            .then((docRef) => {
+                console.log("New user registered ", docRef.id);
+                UserId = docRef.id
+                localStorage.setItem("UserId", UserId)
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+    } else {
+        UserId = localStorage.getItem("UserId")
     }
 }
 
