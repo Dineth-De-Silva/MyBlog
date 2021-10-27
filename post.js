@@ -4,13 +4,13 @@ function post_default(PageN, PostN, cyear) {
     post_area.style = "padding: 20px;display:flex;align-items: center;justify-content: center;";
     post_area.appendChild(document.createElement("br"))
     var div = document.createElement("div");
-    div.style = "width: 750px;font-family:OpenSans";
+    div.style = "width: 800px;font-family:OpenSans;background-color: #f3efee;padding:20px;border-radius: 20px;";
     var div2 = document.createElement("div");
     div2.style = "word-wrap: break-word;font-size: xxx-large;font-weight: bold;color: black"
     div.appendChild(div2)
-    post_area.appendChild(document.createElement("br"))
+    div.appendChild(document.createElement("br"))
     var p = document.createElement("p");
-    p.style = "border-left: 6px solid rgb(255, 174, 0);padding: 10px;word-wrap: break-word;text-align: left;font-size: larger";
+    p.style = "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;text-align: left;font-size: larger";
     div.appendChild(p);
     post_area.appendChild(div)
     area.appendChild(post_area);
