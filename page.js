@@ -70,7 +70,7 @@ function page_post(Title, Date, Desc, Id, PageN, cyear) {
     div.appendChild(div2);
     var a = document.createElement("a");
     a.style = "word-wrap: break-word;font-size: x-large;font-weight: bold;color: black";
-    a.href = "https://dineth-de-silva.github.io/MyBlog/" + "?pg=" +PageN + "&po=" + Id;
+    a.href = "https://dineth-de-silva.github.io/MyBlog/" + "?pg=" + PageN + "&po=" + Id;
     a.innerHTML = "<u>" + Title + "</u>";
     div.appendChild(a);
     var div4 = document.createElement("div");
