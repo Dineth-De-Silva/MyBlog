@@ -6,16 +6,16 @@ function page_default(pageN) {
     var area = document.getElementById("area");
     page_post_area.style = "padding: 20px";
     page_post_area.appendChild(document.createElement("br"))
-    var h1 = document.createElement("h1");
-    h1.style = "padding-left: 50px;padding-right: 50px;text-align: center"
+    var div = document.createElement("div");
+    div.style = "padding-left: 50px;padding-right: 50px;text-align: center;font-size: xx-large;font-weight: bold;font-family:OpenSans"
     firebase
         .database()
         .ref("pages/" + pageN + "/title")
         .on('value', (snapshot) => {
             const title = snapshot.val();
-            h1.innerHTML = "<u>" + title + "</u>";
+            div.innerHTML = "<u>" + title + "</u>";
         });
-    page_post_area.appendChild(h1)
+    page_post_area.appendChild(div)
     var h5 = document.createElement("h5");
     h5.style = "padding-left: 50px;padding-right: 50px;text-align: center"
     firebase
