@@ -1,13 +1,13 @@
 .main_page {
-    width: 500px;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 25px;
-    background-color: #f3efee;
-    color: black;
+  width: 500px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px;
+  background-color: #f3efee;
+  color: black;
 }
 
 .main_area_col {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }

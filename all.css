@@ -1,14 +1,14 @@
 .all_post {
-    width: 550px;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 10px;
-    font-family: OpenSans;
-    background-color: #f3efee;
-    color: black;
+  width: 550px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+  font-family: OpenSans;
+  background-color: #f3efee;
+  color: black;
 }
 
 .all_area_col {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
