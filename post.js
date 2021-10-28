@@ -2,7 +2,7 @@ function post_default(PageN, PostN, cyear) {
   var area = document.getElementById("area");
   var post_area = document.createElement("div");
   post_area.style =
-    "padding: 20px;display:flex;align-items: center;justify-content: center;";
+    "padding: 10px;display:flex;align-items: center;justify-content: center;";
   post_area.appendChild(document.createElement("br"));
   var div = document.createElement("div");
   div.style =
@@ -14,7 +14,7 @@ function post_default(PageN, PostN, cyear) {
   div.appendChild(document.createElement("br"));
   var p = document.createElement("p");
   p.style =
-    "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;text-align: justify;font-size: larger";
+    "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;font-size: larger";
   div.appendChild(p);
   post_area.appendChild(div);
   area.appendChild(post_area);
