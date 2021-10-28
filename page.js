@@ -17,16 +17,17 @@ function page_default(pageN) {
       div.innerHTML = "<u>" + title + "</u>";
     });
   page_post_area.appendChild(div);
-  var h5 = document.createElement("h5");
-  h5.style = "padding-left: 50px;padding-right: 50px;text-align: center";
+  page_post_area.appendChild(document.createElement("br"));
+  var div2 = document.createElement("div");
+  div2.style = "padding-left: 50px;padding-right: 50px;text-align: center;font-size: larger;font-weight: bold;font-family:OpenSans";
   firebase
     .database()
     .ref("pages/" + pageN + "/desc")
     .on("value", (snapshot) => {
       const desc = snapshot.val();
-      h5.innerHTML = desc;
+      div2.innerHTML = desc;
     });
-  page_post_area.appendChild(h5);
+  page_post_area.appendChild(div2);
   page_post_area.appendChild(document.createElement("br"));
   var p = document.createElement("p");
   p.style = "text-align: center;font-size: x-large";
