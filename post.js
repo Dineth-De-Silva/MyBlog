@@ -9,12 +9,12 @@ function post_default(PageN, PostN, cyear) {
     "width: 800px;font-family:OpenSans;background-color: #f3efee;padding:20px;border-radius: 20px;";
   var div2 = document.createElement("div");
   div2.style =
-    "word-wrap: break-word;font-size: xx-large;font-weight: bold;color: black;margin-left:10px;text-align:center";
+    "word-wrap: break-word;font-size: xx-large;font-weight: bold;text-align:center;text-decoration: underline;";
   div.appendChild(div2);
   div.appendChild(document.createElement("br"));
   var p = document.createElement("p");
   p.style =
-    "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;text-align: left;font-size: larger";
+    "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;text-align: justify;font-size: larger";
   div.appendChild(p);
   post_area.appendChild(div);
   area.appendChild(post_area);

@@ -8,7 +8,7 @@ function page_default(pageN) {
   page_post_area.appendChild(document.createElement("br"));
   var div = document.createElement("div");
   div.style =
-    "padding-left: 50px;padding-right: 50px;text-align: center;font-size: xx-large;font-weight: bold;font-family:OpenSans";
+    "text-align: center;font-size: xx-large;font-weight: bold;font-family:OpenSans";
   firebase
     .database()
     .ref("pages/" + pageN + "/title")
@@ -19,7 +19,7 @@ function page_default(pageN) {
   page_post_area.appendChild(div);
   page_post_area.appendChild(document.createElement("br"));
   var div2 = document.createElement("div");
-  div2.style = "padding-left: 50px;padding-right: 50px;text-align: center;font-size: larger;font-weight: bold;font-family:OpenSans";
+  div2.style = "text-align: center;font-size: larger;font-weight: bold;font-family:OpenSans";
   firebase
     .database()
     .ref("pages/" + pageN + "/desc")
