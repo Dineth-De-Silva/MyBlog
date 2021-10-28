@@ -8,7 +8,7 @@ function page_default(pageN) {
   page_post_area.appendChild(document.createElement("br"));
   var div = document.createElement("div");
   div.style =
-    "padding-left:5px;padding-right:5px;text-align: center;font-size: xx-large;font-weight: bold;font-family:OpenSans";
+    "padding-left:10px;padding-right:10px;text-align: center;font-size: xx-large;font-weight: bold;font-family:OpenSans";
   firebase
     .database()
     .ref("pages/" + pageN + "/title")
