@@ -131,7 +131,7 @@ function main_fetchpages() {
         let Title = Childsnapshot.val().title;
         let Desc = Childsnapshot.val().desc;
         main_addpage(true, Id, Title, Nposts, Desc);
-        window.scrollTo(0, 415);
+        window.scrollTo(0, 375);
       });
     });
 }

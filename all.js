@@ -110,7 +110,7 @@ function all_fetchposts(cyear) {
         let Desc = Childsnapshot.val().desc;
         let Pageid = Childsnapshot.val().pageid;
         all_addpost(Title, Date, Desc, Pageid);
-        window.scrollTo(0, 415);
+        window.scrollTo(0, 375);
       });
     });
 }

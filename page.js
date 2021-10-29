@@ -108,7 +108,7 @@ function page_fetchposts(pageN, cyear) {
         let Desc = Childsnapshot.val().desc;
         let Id = Childsnapshot.val().id;
         page_addpost(Title, Date, Desc, Id, pageN, cyear);
-        window.scrollTo(0, 415);
+        window.scrollTo(0, 375);
       });
     });
 }
