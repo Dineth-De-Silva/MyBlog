@@ -22,7 +22,7 @@ function registerUser() {
     db.collection("users")
       .add({})
       .then((docRef) => {
-        console.log("New user registered ", docRef.id);
+        console.log("New user registered as ", docRef.id);
         UserId = docRef.id;
         localStorage.setItem("UserId", UserId);
       })
@@ -31,6 +31,7 @@ function registerUser() {
       });
   } else {
     UserId = localStorage.getItem("UserId");
+    console.log("Identified the user as ", UserId);
   }
 }
 

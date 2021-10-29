@@ -83,3 +83,22 @@
     flex-direction: column;
   }
 }
+
+.logup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 400px) {
+  .logup {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+}

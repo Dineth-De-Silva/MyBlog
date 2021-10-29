@@ -27,5 +27,6 @@ function post_default(PageN, PostN, cyear) {
       let Desc = snapshot.val().desc;
       div2.innerHTML = Title;
       p.innerHTML = Desc;
+      window.scrollTo(0, 415);
     });
 }
