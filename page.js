@@ -19,7 +19,8 @@ function page_default(pageN) {
   page_post_area.appendChild(div);
   page_post_area.appendChild(document.createElement("br"));
   var div2 = document.createElement("div");
-  div2.style = "padding-left:20px;padding-right:20px;text-align: center;font-size: larger;font-weight: bold;font-family:OpenSans";
+  div2.style =
+    "padding-left:20px;padding-right:20px;text-align: center;font-size: larger;font-weight: bold;font-family:OpenSans";
   firebase
     .database()
     .ref("pages/" + pageN + "/desc")
