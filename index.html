@@ -44,7 +44,7 @@
     <title>MyBlog</title>
   </head>
 
-  <body>
+  <body style="background-image: url(assets/background2.png)">
     <!--Firebase-->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -75,18 +75,28 @@
     <header>
       <div
         style="
-          background-image: url(assets/background.gif);
           background-size: cover;
           padding: 10px;
+          padding-left: 100px;
+          padding-right: 100px;
         "
       >
         <br />
         <br />
         <br />
         <div class="header">
-          <div style="flex-grow: 1; text-align: center">
-            <div class="face-c">
-              <img alt="Face" src="assets/face.jpg" class="face" />
+          <div style="padding-left: 50px; padding-right: 50px">
+            <div>
+              <img
+                alt="Face"
+                height="200"
+                src="assets/face.jpg"
+                style="
+                  border-radius: 50%;
+                  border-style: solid;
+                  border-color: rgb(255, 174, 0);
+                "
+              />
             </div>
           </div>
           <div style="display: flex; align-self: center">
@@ -97,22 +107,21 @@
                 padding-left: 50px;
                 padding-right: 50px;
                 flex-grow: 1;
-                color: wheat;
                 font-family: PermanentMarker;
               "
             >
               <b>I'm D. A Dineth De Silva, currently a student @ D.S.S.C </b>
+              <br />
+              <br />
+              <img src="assets/github.svg" alt="github" class="icon" />
+              <img src="assets/youtube.svg" alt="github" class="icon" />
             </p>
           </div>
         </div>
       </div>
     </header>
-
     <!--Main-->
-    <main
-      id="area"
-      style="background-image: url(assets/background2.png)"
-    ></main>
+    <main id="area"></main>
 
     <!--Footer-->
     <footer

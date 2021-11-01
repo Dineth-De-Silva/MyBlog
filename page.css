@@ -1,10 +1,13 @@
 .page_post {
   width: 550px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   padding: 30px;
   margin: 10px;
   font-family: OpenSans;
-  background-color: #f3efee;
+  /* border-style: solid;
+  border-color: rgb(112, 112, 112); */
+  border-width: 0.5px;
+  /* background-color: #f3efee; */
   color: black;
 }
 

@@ -6,7 +6,7 @@ function post_default(PageN, PostN, cyear) {
   post_area.appendChild(document.createElement("br"));
   var div = document.createElement("div");
   div.style =
-    "width: 800px;font-family:OpenSans;background-color: #f3efee;padding:20px;border-radius: 20px;";
+    "width: 100%;font-family:OpenSans;background-color: #f3efee;padding:20px;";
   var div2 = document.createElement("div");
   div2.style =
     "word-wrap: break-word;font-size: xx-large;font-weight: bold;text-align:center;text-decoration: underline;";
