@@ -12,6 +12,19 @@
   opacity: 0.5;
 }
 
+.page_post {
+  width: 550px;
+  padding: 30px;
+  margin: 10px;
+  border-width: 0.5px;
+  color: black;
+}
+
+.page_area_col {
+  display: flex;
+  flex-direction: row;
+}
+
 /*controls*/
 @media only screen and (max-width: 900px) {
   .header {
@@ -20,32 +33,8 @@
   }
 }
 
-@media only screen and (max-width: 1150px) {
-  .main_area_col {
-    flex-direction: column;
-  }
-}
-
 @media only screen and (max-width: 1180px) {
   .page_area_col {
     flex-direction: column;
   }
-
-  .all_area_col {
-    flex-direction: column;
-  }
-}
-
-.page_post {
-  width: 550px;
-  padding: 30px;
-  margin: 10px;
-  font-family: OpenSans;
-  border-width: 0.5px;
-  color: black;
-}
-
-.page_area_col {
-  display: flex;
-  flex-direction: row;
 }
