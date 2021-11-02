@@ -145,7 +145,7 @@ function to_post_page(Id) {
     var area = document.getElementById("area");
     var post_area = document.createElement("div");
     post_area.style =
-    "padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;display: flex";
+      "padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;display: flex";
     var div = document.createElement("div");
     div.style =
       "background-color:#f3efee;padding: 20px; flex-shrink: 1;width: 100%";
@@ -159,10 +159,11 @@ function to_post_page(Id) {
       "border-left: 6px solid rgb(255, 174, 0);padding-left: 15px;word-wrap: break-word;font-size: larger";
     div.appendChild(p);
     post_area.appendChild(div);
-    var div3 = document.createElement("div")
-    div3.style = "background-color: white;padding: 20px;flex-shrink: 3;width:100%"
-    div3.innerHTML = "Hello"
-    post_area.appendChild(div3)
+    var div3 = document.createElement("div");
+    div3.style =
+      "background-color: white;padding: 20px;flex-shrink: 3;width:100%";
+    div3.innerHTML = "Hello";
+    post_area.appendChild(div3);
     area.appendChild(post_area);
     firebase
       .database()

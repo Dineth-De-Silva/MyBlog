@@ -25,7 +25,24 @@
   flex-direction: row;
 }
 
+.newsl {
+  width: 500px;
+  margin: auto;
+  border-radius: 25px;
+  border-width: 0.5px;
+  border-color: rgb(71, 71, 71);
+  border-style: solid;
+  background-color: #f3efee;
+  padding: 20px;
+}
+
 /*controls*/
+@media only screen and (max-width: 540px) {
+  .newsl {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .header {
     flex-direction: column;
