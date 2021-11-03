@@ -41,11 +41,15 @@ function parachecker() {
   if (urlParams.has("po")) {
     to_post_page(urlParams.get("po"));
   } else {
-    to_posts_page();
+    if (urlParams.has("f")) {
+      to_posts_page(urlParams.get("f"));
+    } else {
+      to_posts_page(0);
+    }
   }
 }
 
-function to_posts_page() {
+function to_posts_page(FromP) {
   var posts_post_position_right = true;
   var posts_current_col = 0;
   var posts_post_area = document.createElement("div");
@@ -53,7 +57,7 @@ function to_posts_page() {
   function posts_initial() {
     var area = document.getElementById("area");
     posts_post_area.style =
-      "background-color:#f3efee;padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;";
+      "background-color:white;padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;border-bottom-right-radius:25%";
     posts_post_area.appendChild(document.createElement("br"));
     var p = document.createElement("p");
     p.style = "text-align: center;font-size: x-large";
@@ -121,7 +125,8 @@ function to_posts_page() {
     return div;
   }
 
-  function posts_fetchposts() {
+  function posts_fetchposts(FromP) {
+    var nposts = 0;
     firebase
       .database()
       .ref("posts/")
@@ -132,12 +137,23 @@ function to_posts_page() {
           let Title = Childsnapshot.val().title;
           let Desc = Childsnapshot.val().desc;
           let Id = Childsnapshot.val().id;
-          posts_add(Title, Date, Desc, Id);
+          let Rid = Childsnapshot.val().rid;
+          if (nposts < 4) {
+            if (Rid >= FromP) {
+              posts_add(Title, Date, Desc, Id);
+              nposts++;
+            }
+          } else {
+            var VeiwMore = document.getElementById("VeiwMore");
+            VeiwMore.href =
+              "https://dineth-de-silva.github.io/MyBlog/?f=" + Rid;
+            VeiwMore.style = "displa:inline;border-radius: 50px; padding: 8px;";
+          }
         });
       });
   }
   posts_initial();
-  posts_fetchposts();
+  posts_fetchposts(FromP);
 }
 
 function to_post_page(Id) {

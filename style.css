@@ -29,10 +29,7 @@
   width: 500px;
   margin: auto;
   border-radius: 25px;
-  border-width: 0.5px;
-  border-color: rgb(71, 71, 71);
-  border-style: solid;
-  background-color: #f3efee;
+  background-color: white;
   padding: 20px;
 }
 
