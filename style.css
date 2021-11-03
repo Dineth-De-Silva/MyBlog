@@ -28,8 +28,6 @@
 .post_area {
   background-color: white;
   padding: 20px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
   display: flex;
   border-bottom-right-radius: 25%;
 }

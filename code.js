@@ -1,7 +1,6 @@
 var UserId = null;
 window.addEventListener("load", (e) => {
   registerSW();
-  registerUser();
 });
 
 async function registerSW() {
@@ -13,25 +12,6 @@ async function registerSW() {
     }
   } else {
     document.querySelector(".alert").removeAttribute("hidden");
-  }
-}
-
-function registerUser() {
-  if (localStorage.getItem("UserId") === null) {
-    var db = firebase.firestore();
-    db.collection("users")
-      .add({})
-      .then((docRef) => {
-        console.log("New user registered as ", docRef.id);
-        UserId = docRef.id;
-        localStorage.setItem("UserId", UserId);
-      })
-      .catch((error) => {
-        console.error("Error adding document: ", error);
-      });
-  } else {
-    UserId = localStorage.getItem("UserId");
-    console.log("Identified the user as ", UserId);
   }
 }
 
@@ -53,7 +33,7 @@ function to_posts_page() {
   function posts_initial() {
     var area = document.getElementById("area");
     posts_post_area.style =
-      "background-color:white;padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;border-bottom-right-radius:25%";
+      "background-color:white;padding: 20px;border-bottom-right-radius:25%";
     posts_post_area.appendChild(document.createElement("br"));
     var p = document.createElement("p");
     p.style = "text-align: center;font-size: x-large";
@@ -175,10 +155,10 @@ function to_post_page(Id) {
     post_area.appendChild(div);
     var div3 = document.createElement("div");
     div3.style =
-      "padding: 10px;flex-shrink: 3;width:100%;font-family: Roboto Mono;font-size: larger;";
+      "padding: 10px;flex-shrink: 3;width:100%;font-family: Roboto Mono;";
     var div4 = document.createElement("div");
     div4.style =
-      "padding: 10px;border: solid;width: fit-content;margin: auto;border-width: 0.5px;";
+      "padding: 10px;width: fit-content;margin: auto;border-width: 0.5px;";
     div3.appendChild(div4);
     post_area.appendChild(div3);
     area.appendChild(post_area);
