@@ -38,6 +38,14 @@
       src="https://kit.fontawesome.com/82f4c8e4b0.js"
     ></script>
 
+    <!--Moment-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!--Custom-->
     <link href="style.css" rel="stylesheet" />
 
@@ -116,14 +124,24 @@
     <main id="area" style="font-family: Open Sans"></main>
     <br />
     <div style="margin: auto; width: fit-content">
-      <a
+      <script>
+        function VeiwMore() {
+          var n_maxposts = parseInt(sessionStorage.getItem("maxposts")) + 4;
+          sessionStorage.setItem("maxposts", n_maxposts);
+          location.reload();
+          sessionStorage.setItem("scroll", true);
+          sessionStorage.setItem("pageYOffset", window.pageYOffset);
+        }
+      </script>
+      <button
         id="VeiwMore"
         type="button"
+        onclick="VeiwMore()"
         class="btn btn-outline-dark btn-sm"
-        style="border-radius: 50px; padding: 8px; display: none"
+        style="border-radius: 50px; padding: 8px; display: none; margin: 10px"
       >
-        Veiw More <i class="fas fa-chevron-right"></i>
-      </a>
+        Veiw More <i class="fas fa-chevron-down"></i>
+      </button>
     </div>
     <br />
     <div style="width: 100%; padding: 20px">
@@ -133,7 +151,7 @@
         </h3>
         <br />
         <input
-          style="margin: auto; width: 90%; border-radius: 50px"
+          style="margin: auto; width: 100%; border-radius: 50px"
           type="email"
           class="form-control"
           placeholder="Enter Your email"

@@ -41,15 +41,11 @@ function parachecker() {
   if (urlParams.has("po")) {
     to_post_page(urlParams.get("po"));
   } else {
-    if (urlParams.has("f")) {
-      to_posts_page(urlParams.get("f"));
-    } else {
-      to_posts_page(0);
-    }
+    to_posts_page();
   }
 }
 
-function to_posts_page(FromP) {
+function to_posts_page() {
   var posts_post_position_right = true;
   var posts_current_col = 0;
   var posts_post_area = document.createElement("div");
@@ -125,7 +121,11 @@ function to_posts_page(FromP) {
     return div;
   }
 
-  function posts_fetchposts(FromP) {
+  function posts_fetchposts() {
+    if (!sessionStorage.getItem("maxposts")) {
+      sessionStorage.setItem("maxposts", 4);
+    }
+    var maxposts = sessionStorage.getItem("maxposts");
     var nposts = 0;
     firebase
       .database()
@@ -138,33 +138,31 @@ function to_posts_page(FromP) {
           let Desc = Childsnapshot.val().desc;
           let Id = Childsnapshot.val().id;
           let Rid = Childsnapshot.val().rid;
-          if (nposts < 4) {
-            if (Rid >= FromP) {
-              posts_add(Title, Date, Desc, Id);
-              nposts++;
-            }
+          if (nposts < maxposts) {
+            posts_add(Title, Date, Desc, Id);
+            nposts++;
           } else {
             var VeiwMore = document.getElementById("VeiwMore");
-            VeiwMore.href =
-              "https://dineth-de-silva.github.io/MyBlog/?f=" + Rid;
-            VeiwMore.style = "displa:inline;border-radius: 50px; padding: 8px;";
+            VeiwMore.style =
+              "displa:inline;border-radius: 50px; padding: 8px;margin:10px;";
+          }
+          if (sessionStorage.getItem("scroll")) {
+            window.scrollTo(0, parseInt(sessionStorage.getItem("pageYOffset")));
           }
         });
       });
   }
   posts_initial();
-  posts_fetchposts(FromP);
+  posts_fetchposts();
 }
 
 function to_post_page(Id) {
   function post_page(Id) {
     var area = document.getElementById("area");
     var post_area = document.createElement("div");
-    post_area.style =
-      "padding: 20px;border-top-left-radius: 25px;border-top-right-radius: 25px;display: flex";
+    post_area.classList.add("post_area");
     var div = document.createElement("div");
-    div.style =
-      "background-color:#f3efee;padding: 20px; flex-shrink: 1;width: 100%";
+    div.style = "padding: 20px; flex-shrink: 1;width: 100%;";
     var div2 = document.createElement("div");
     div2.style =
       "word-wrap: break-word;font-size: xx-large;font-weight: bold;text-decoration: underline;";
@@ -177,8 +175,11 @@ function to_post_page(Id) {
     post_area.appendChild(div);
     var div3 = document.createElement("div");
     div3.style =
-      "background-color: white;padding: 20px;flex-shrink: 3;width:100%";
-    div3.innerHTML = "Hello";
+      "padding: 10px;flex-shrink: 3;width:100%;font-family: Roboto Mono;font-size: larger;";
+    var div4 = document.createElement("div");
+    div4.style =
+      "padding: 10px;border: solid;width: fit-content;margin: auto;border-width: 0.5px;";
+    div3.appendChild(div4);
     post_area.appendChild(div3);
     area.appendChild(post_area);
     firebase
@@ -187,8 +188,10 @@ function to_post_page(Id) {
       .on("value", (snapshot) => {
         let Title = snapshot.val().title;
         let Desc = snapshot.val().desc;
+        let Date = snapshot.val().date;
         div2.innerHTML = Title;
         p.innerHTML = Desc;
+        div4.innerHTML = "Date : " + Date + "<br/> Author : Dineth";
       });
   }
   post_page(Id);

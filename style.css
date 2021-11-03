@@ -25,12 +25,20 @@
   flex-direction: row;
 }
 
+.post_area {
+  background-color: white;
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  border-bottom-right-radius: 25%;
+}
 .newsl {
   width: 500px;
   margin: auto;
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: white;
-  padding: 20px;
+  padding: 40px;
 }
 
 /*controls*/
@@ -44,6 +52,9 @@
   .header {
     flex-direction: column;
     text-align: center;
+  }
+  .post_area {
+    flex-direction: column;
   }
 }
 
