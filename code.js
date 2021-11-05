@@ -74,8 +74,13 @@ function to_posts_page() {
     var div = document.createElement("div");
     div.classList.add("page_post");
     var div2 = document.createElement("div");
-    div2.style = "front-weight: bold";
-    div2.innerHTML = Date;
+    if (moment().diff(Date, "days") <= 5) {
+      div2.innerHTML = moment(Date).fromNow();
+      div2.style = "front-weight: bold;color:green";
+    } else {
+      div2.innerHTML = moment(Date).format("LL");
+      div2.style = "front-weight: bold";
+    }
     div.appendChild(div2);
     var a = document.createElement("a");
     a.style =
