@@ -25,6 +25,11 @@ function parachecker() {
   }
 }
 
+function clearCache() {
+  var area = document.getElementById("area");
+  area.innerHTML = null;
+}
+
 function to_posts_page() {
   var posts_post_position_right = true;
   var posts_current_col = 0;
@@ -80,12 +85,17 @@ function to_posts_page() {
       div2.style = "front-weight: bold";
     }
     div.appendChild(div2);
-    var a = document.createElement("a");
-    a.style =
-      "word-wrap: break-word;font-size: x-large;font-weight: bold;color: black;text-decoration:none";
-    a.href = "?po=" + Id;
-    a.innerHTML = Title;
-    div.appendChild(a);
+    var div5 = document.createElement("div");
+    div5.style =
+      "word-wrap: break-word;font-size: x-large;font-weight: bold;curser: pointer";
+    div5.innerHTML = Title;
+    div5.addEventListener("click", (event) => {
+      to_post_page(Id);
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      urlParams.set("po", Id);
+    });
+    div.appendChild(div5);
     div.appendChild(document.createElement("hr"));
     var div4 = document.createElement("div");
     div4.style =
@@ -139,6 +149,7 @@ function to_posts_page() {
         });
       });
   }
+  clearCache();
   posts_initial();
   posts_fetchposts();
 }
@@ -182,6 +193,7 @@ function to_post_page(Id) {
           "Date : " + moment(Date).format("LL") + "<br/> Author : Dineth";
       });
   }
+  clearCache();
   post_page(Id);
 }
 parachecker();
