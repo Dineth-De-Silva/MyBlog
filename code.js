@@ -65,9 +65,7 @@ function to_posts_page() {
   function posts_create(Title, Date, Desc, Id) {
     var max_desc_width = 100;
     if (Desc.length > max_desc_width) {
-      Desc =
-        Desc.substring(0, 100) +
-        "... <a href='go' style='font-size: medium'>Read More</a>";
+      Desc = Desc.substring(0, 100) + "...";
     }
     var divn = document.createElement("div");
     divn.style = "flex-grow: 1; display: flex; justify-content: center";
@@ -93,6 +91,10 @@ function to_posts_page() {
     div4.style =
       "border-left: 6px solid rgb(255, 174, 0);padding: 10px;word-wrap: break-word;text-align: left;font-size: large";
     div4.innerHTML = Desc;
+    var a1 = document.createElement("a");
+    a1.href = "?po=" + Id;
+    a1.innerHTML = "Read More";
+    div4.appendChild(a1);
     div.appendChild(div4);
     divn.appendChild(div);
     return divn;
@@ -150,7 +152,7 @@ function to_post_page(Id) {
     div.style = "padding: 20px; flex-shrink: 1;width: 100%;";
     var div2 = document.createElement("div");
     div2.style =
-      "word-wrap: break-word;font-size: xx-large;font-weight: bold;text-decoration: underline;";
+      "width: fit-content;word-wrap: break-word;font-size: xx-large;font-weight: bold;background-image:url(assets/background4.png);line-height: 75px;background-size: contain";
     div.appendChild(div2);
     div.appendChild(document.createElement("br"));
     var p = document.createElement("p");
@@ -176,7 +178,8 @@ function to_post_page(Id) {
         let Date = snapshot.val().date;
         div2.innerHTML = Title;
         p.innerHTML = Desc;
-        div4.innerHTML = "Date : " + Date + "<br/> Author : Dineth";
+        div4.innerHTML =
+          "Date : " + moment(Date).format("LL") + "<br/> Author : Dineth";
       });
   }
   post_page(Id);
