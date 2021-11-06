@@ -152,7 +152,7 @@ function to_post_page(Id) {
     div.style = "padding: 20px; flex-shrink: 1;width: 100%;";
     var div2 = document.createElement("div");
     div2.style =
-      "width: fit-content;word-wrap: break-word;font-size: xx-large;font-weight: bold;background-image:url(assets/background4.png);line-height: 75px;background-size: contain";
+      "width: fit-content;word-wrap: break-word;font-size: xx-large;font-weight: bold;background-image:url(assets/background4.webp);background-size: contain;";
     div.appendChild(div2);
     div.appendChild(document.createElement("br"));
     var p = document.createElement("p");
