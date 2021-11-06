@@ -120,27 +120,6 @@
     <!--Main-->
     <main id="area" style="font-family: Open Sans"></main>
     <br />
-    <div style="margin: auto; width: fit-content">
-      <script>
-        function VeiwMore() {
-          var n_maxposts = parseInt(sessionStorage.getItem("maxposts")) + 4;
-          sessionStorage.setItem("maxposts", n_maxposts);
-          location.reload();
-          sessionStorage.setItem("scroll", true);
-          sessionStorage.setItem("pageYOffset", window.pageYOffset);
-        }
-      </script>
-      <button
-        id="VeiwMore"
-        type="button"
-        onclick="VeiwMore()"
-        class="btn btn-outline-dark btn-sm"
-        style="border-radius: 50px; padding: 8px; display: none; margin: 10px"
-      >
-        Veiw More <i class="fas fa-chevron-down"></i>
-      </button>
-    </div>
-    <br />
     <div style="width: 100%; padding: 20px">
       <div class="newsl shadow">
         <h3 style="font-weight: bold; color: green; text-align: center">

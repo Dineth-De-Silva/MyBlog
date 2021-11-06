@@ -25,6 +25,14 @@ function parachecker() {
   }
 }
 
+function navigation(Id) {
+  if (Id === null) {
+    to_posts_page();
+  } else {
+    to_post_page(Id);
+  }
+}
+
 function clearCache() {
   var area = document.getElementById("area");
   area.innerHTML = null;
@@ -90,10 +98,8 @@ function to_posts_page() {
       "word-wrap: break-word;font-size: x-large;font-weight: bold;curser: pointer";
     div5.innerHTML = Title;
     div5.addEventListener("click", (event) => {
-      to_post_page(Id);
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      urlParams.set("po", Id);
+      window.history.pushState({ Id }, null, "?po=" + Id);
+      navigation(Id);
     });
     div.appendChild(div5);
     div.appendChild(document.createElement("hr"));
@@ -119,11 +125,6 @@ function to_posts_page() {
   }
 
   function posts_fetchposts() {
-    if (!sessionStorage.getItem("maxposts")) {
-      sessionStorage.setItem("maxposts", 4);
-    }
-    var maxposts = sessionStorage.getItem("maxposts");
-    var nposts = 0;
     firebase
       .database()
       .ref("posts/")
@@ -135,23 +136,17 @@ function to_posts_page() {
           let Desc = Childsnapshot.val().desc;
           let Id = Childsnapshot.val().id;
           let Rid = Childsnapshot.val().rid;
-          if (nposts < maxposts) {
-            posts_add(Title, Date, Desc, Id);
-            nposts++;
-          } else {
-            var VeiwMore = document.getElementById("VeiwMore");
-            VeiwMore.style =
-              "displa:inline;border-radius: 50px; padding: 8px;margin:10px;";
-          }
-          if (sessionStorage.getItem("scroll")) {
-            window.scrollTo(0, parseInt(sessionStorage.getItem("pageYOffset")));
-          }
+          posts_add(Title, Date, Desc, Id);
         });
       });
   }
   clearCache();
   posts_initial();
   posts_fetchposts();
+  window.addEventListener("popstate", (event) => {
+    navigation(event.state.Id);
+  });
+  history.replaceState({ Id: null }, null, "");
 }
 
 function to_post_page(Id) {
@@ -196,4 +191,5 @@ function to_post_page(Id) {
   clearCache();
   post_page(Id);
 }
+
 parachecker();
