@@ -95,7 +95,7 @@ function to_posts_page() {
     div.appendChild(div2);
     var div5 = document.createElement("div");
     div5.style =
-      "word-wrap: break-word;font-size: x-large;font-weight: bold;curser: pointer";
+      "word-wrap: break-word;font-size: x-large;font-weight: bold;cursor: pointer;";
     div5.innerHTML = Title;
     div5.addEventListener("click", (event) => {
       window.history.pushState({ Id }, null, "?po=" + Id);
@@ -107,10 +107,14 @@ function to_posts_page() {
     div4.style =
       "border-left: 6px solid rgb(255, 174, 0);padding: 10px;word-wrap: break-word;text-align: left;font-size: large";
     div4.innerHTML = Desc;
-    var a1 = document.createElement("a");
-    a1.href = "?po=" + Id;
-    a1.innerHTML = "Read More";
-    div4.appendChild(a1);
+    var span = document.createElement("span");
+    span.style = "text-decoration: underline;color: #0d6efd;cursor: pointer";
+    span.addEventListener("click", (event) => {
+      window.history.pushState({ Id }, null, "?po=" + Id);
+      navigation(Id);
+    });
+    span.innerHTML = "Read More";
+    div4.appendChild(span);
     div.appendChild(div4);
     divn.appendChild(div);
     return divn;
